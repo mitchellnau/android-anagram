@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Game"
-                android:id="@+id/button"
+                android:id="@+id/newgame"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.5" />
 
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="About"
-                android:id="@+id/button2"
+                android:id="@+id/about"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.5" />
         </LinearLayout>
@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Exit"
-                android:id="@+id/button4"
+                android:id="@+id/exit"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.5" />
         </LinearLayout>
