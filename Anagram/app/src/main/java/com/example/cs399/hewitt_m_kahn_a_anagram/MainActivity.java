@@ -8,20 +8,42 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mBtLaunchActivity;
+    private Button aboutButton;
+    private Button newGameButton;
+    private Button exitButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mBtLaunchActivity = (Button) findViewById(R.id.button2);
+        aboutButton = (Button) findViewById(R.id.button2);
+        newGameButton = (Button) findViewById(R.id.button);
+        exitButton = (Button) findViewById(R.id.button4);
 
-        mBtLaunchActivity.setOnClickListener(new View.OnClickListener() {
+        newGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toNewGame();
+            }
+        });
+        aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toAbout();
             }
         });
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public void toNewGame(){
+
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
     }
 
     public void toAbout(){
