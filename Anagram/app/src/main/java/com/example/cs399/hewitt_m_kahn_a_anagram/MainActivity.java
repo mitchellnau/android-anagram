@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button aboutButton;
     private Button newGameButton;
+    private Button challengeButton;
     private Button exitButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         aboutButton = (Button) findViewById(R.id.about);
         newGameButton = (Button) findViewById(R.id.newgame);
+        challengeButton = (Button) findViewById(R.id.challenges);
         exitButton = (Button) findViewById(R.id.exit);
 
         newGameButton.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toAbout();
+            }
+        });
+        challengeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toChallenges();
             }
         });
         exitButton.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
     public void toAbout(){
 
         Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
+    }
+
+    public void toChallenges(){
+
+        Intent intent = new Intent(this, ChallengeActivity.class);
         startActivity(intent);
     }
 }
