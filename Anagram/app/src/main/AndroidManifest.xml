@@ -24,7 +24,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.cs399.hewitt_m_kahn_a_anagram.MainActivity" />
         </activity>
-        <activity android:name=".NewGameActivity"></activity>
+        <activity android:name=".NewGameActivity" />
+        <activity android:name=".ResultsActivity"></activity>
     </application>
 
 </manifest>
