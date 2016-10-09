@@ -92,8 +92,8 @@ public class NewGameActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                updateScore();
                 if(current < total){
-                    updateScore();
                     nextAnagram();
                 }
                 if(current == total){
