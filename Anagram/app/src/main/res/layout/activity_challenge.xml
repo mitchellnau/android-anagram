@@ -7,23 +7,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.cs399.hewitt_m_kahn_a_anagram.MainActivity">
+    tools:context="com.example.cs399.hewitt_m_kahn_a_anagram.ChallengeActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Anagram Game"
-            android:id="@+id/textView"
+            android:text="Select a challenge:"
+            android:id="@+id/info"
             android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
-            android:typeface="serif" />
+            android:textSize="26dp"
+            android:textAlignment="center" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -33,39 +35,44 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Game"
-                android:id="@+id/newgame"
-                android:layout_gravity="center_horizontal"
+                android:text="Easy"
+                android:id="@+id/easybutton"
+                android:textSize="26dp"
+                android:layout_gravity="right"
                 android:layout_weight="0.5" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About"
-                android:id="@+id/about"
-                android:layout_gravity="center_horizontal"
+                android:text="Medium"
+                android:id="@+id/mediumbutton"
+                android:textSize="26dp"
+                android:layout_gravity="right"
                 android:layout_weight="0.5" />
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" >
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="challenges"
-                android:id="@+id/challenges"
-                android:layout_gravity="center_horizontal"
+                android:text="hard"
+                android:id="@+id/hardbutton"
+                android:textSize="26dp"
+                android:layout_gravity="right"
                 android:layout_weight="0.5" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Exit"
-                android:id="@+id/exit"
-                android:layout_gravity="center_horizontal"
+                android:text="expert"
+                android:id="@+id/expertbutton"
+                android:textSize="26dp"
+                android:layout_gravity="right"
                 android:layout_weight="0.5" />
         </LinearLayout>
 

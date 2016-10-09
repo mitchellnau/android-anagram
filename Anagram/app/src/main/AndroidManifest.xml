@@ -25,7 +25,9 @@
                 android:value="com.example.cs399.hewitt_m_kahn_a_anagram.MainActivity" />
         </activity>
         <activity android:name=".NewGameActivity" />
-        <activity android:name=".ResultsActivity"></activity>
+        <activity android:name=".ResultsActivity" />
+        <activity android:name=".ChallengeActivity" />
+        <activity android:name=".EasyActivity"></activity>
     </application>
 
 </manifest>
