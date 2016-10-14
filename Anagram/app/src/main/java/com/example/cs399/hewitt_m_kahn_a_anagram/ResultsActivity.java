@@ -52,7 +52,7 @@ public class ResultsActivity extends AppCompatActivity {
         correctText.setText("Correct: " + Integer.toString(res_score));
         incorrectText.setText("Incorrect: " + Integer.toString(res_incorrect));
         resultUnanswered.setText("Unanswered: " + Integer.toString(res_unanswered));
-        resultScore.setText("Score: " + Integer.toString(res_score) + "/" + Integer.toString(res_total));
+        resultScore.setText("Score: " + Double.toString((double)res_score/res_total*100) + "%");
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
