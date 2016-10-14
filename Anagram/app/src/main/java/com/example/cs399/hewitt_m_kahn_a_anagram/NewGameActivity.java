@@ -138,6 +138,8 @@ public class NewGameActivity extends AppCompatActivity {
         intent.putExtra("total", total);
         intent.putExtra("from", 1);
         intent.putExtra("score", score);
+        intent.putExtra("unanswered", 0);
+        intent.putExtra("incorrect", total-score);
         startActivity(intent);
     }
 }
