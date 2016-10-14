@@ -136,6 +136,7 @@ public class NewGameActivity extends AppCompatActivity {
     public void toResults(){
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra("total", total);
+        intent.putExtra("from", 1);
         intent.putExtra("score", score);
         startActivity(intent);
     }
