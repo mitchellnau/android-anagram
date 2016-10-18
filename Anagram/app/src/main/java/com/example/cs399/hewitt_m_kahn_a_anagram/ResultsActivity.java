@@ -47,12 +47,25 @@ public class ResultsActivity extends AppCompatActivity {
         res_incorrect = intent.getIntExtra("incorrect", -1);
         res_unanswered = intent.getIntExtra("unanswered", -1);
         from = intent.getIntExtra("from", 0);
+        String[] correctListOfAnagrams = intent.getStringArrayExtra("correctListOfAnagrams");
+        String[] incorrectListOfAnagrams = intent.getStringArrayExtra("incorrectListOfAnagrams");
 
         scoreTotal.setText("Total anagrams: " + Integer.toString(res_total));
         correctText.setText("Correct: " + Integer.toString(res_score));
         incorrectText.setText("Incorrect: " + Integer.toString(res_incorrect));
         resultUnanswered.setText("Unanswered: " + Integer.toString(res_unanswered));
         resultScore.setText("Score: " + Double.toString((double)res_score/res_total*100) + "%");
+        anagramText.setText("Answer :: Guess" +
+                correctListOfAnagrams[0] + incorrectListOfAnagrams[0] + "\n" +
+                correctListOfAnagrams[1] + incorrectListOfAnagrams[1] + "\n" +
+                correctListOfAnagrams[2] + incorrectListOfAnagrams[2] + "\n" +
+                correctListOfAnagrams[3] + incorrectListOfAnagrams[3] + "\n" +
+                correctListOfAnagrams[4] + incorrectListOfAnagrams[4] + "\n" +
+                correctListOfAnagrams[5] + incorrectListOfAnagrams[5] + "\n" +
+                correctListOfAnagrams[6] + incorrectListOfAnagrams[6] + "\n" +
+                correctListOfAnagrams[7] + incorrectListOfAnagrams[7] + "\n" +
+                correctListOfAnagrams[8] + incorrectListOfAnagrams[8] + "\n" +
+                correctListOfAnagrams[9] + incorrectListOfAnagrams[9] + "\n");
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
