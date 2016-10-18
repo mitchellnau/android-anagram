@@ -1,4 +1,4 @@
-package com.example.cs399.hewitt_m_kahn_a_lara_k_anagram;
+package com.example.cs399.hewitt_m_kahn_a_anagram;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
