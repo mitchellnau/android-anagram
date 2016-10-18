@@ -47,8 +47,8 @@ public class ResultsActivity extends AppCompatActivity {
         res_incorrect = intent.getIntExtra("incorrect", -1);
         res_unanswered = intent.getIntExtra("unanswered", -1);
         from = intent.getIntExtra("from", 0);
-        String[] correctListOfAnagrams = intent.getStringArrayExtra("correctListOfAnagrams");
-        String[] incorrectListOfAnagrams = intent.getStringArrayExtra("incorrectListOfAnagrams");
+        String[] correctListOfAnagrams = intent.getStringArrayExtra("correctList");
+        String[] incorrectListOfAnagrams = intent.getStringArrayExtra("incorrectList");
 
         scoreTotal.setText("Total anagrams: " + Integer.toString(res_total));
         correctText.setText("Correct: " + Integer.toString(res_score));
