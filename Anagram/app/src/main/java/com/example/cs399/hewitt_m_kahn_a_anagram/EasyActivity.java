@@ -1,4 +1,4 @@
-package com.example.cs399.hewitt_m_kahn_a_anagram;
+package com.example.cs399.hewitt_m_kahn_a_lara_k_anagram;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -29,6 +29,8 @@ public class EasyActivity extends AppCompatActivity {
     int current = 0;
     int total = 10;
     int time= 60;
+    String theirWord;
+    String[] wordsWrong;
     private String lf_content = "";
     private String[] wordlist = {"good", "worse", "first", //10 words in this list
             "last", "long", "great", "turtle", "other", "blink", "large"};
@@ -37,6 +39,11 @@ public class EasyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy);
+
+        wordsWrong = new String[total];
+        for(int i = 0; i < total; i++){
+            wordsWrong[i] = "";
+        }
 
         String wordnums = "";
         for(int i = 0; i < total; i++){
@@ -109,6 +116,7 @@ public class EasyActivity extends AppCompatActivity {
                 time--;
             }
             public void onFinish(){
+                timerfield.setText("Time: 00:00");
                 toResults(1);
             }
         }.start();
@@ -134,11 +142,13 @@ public class EasyActivity extends AppCompatActivity {
         }
     }
     public void updateScore(int ind){
-        if(wordlist[ind].compareTo(inputfield.getText().toString()) == 0){
+        theirWord = inputfield.getText().toString();
+        if(wordlist[ind].compareTo(theirWord) == 0){
             score++;
         }else{
             incorrect++;
         }
+        wordsWrong[current] = theirWord;
         remfield.setText("Remaining: " + Integer.toString(score) + " right /" + Integer.toString(total - tries) + " left");
         inputfield.setText("");
     }
@@ -154,6 +164,8 @@ public class EasyActivity extends AppCompatActivity {
         intent.putExtra("score", score);
         intent.putExtra("unanswered", words.size() + work);
         intent.putExtra("incorrect", incorrect);
+        intent.putExtra("correctList", wordlist);
+        intent.putExtra("incorrectList", wordsWrong);
         startActivity(intent);
     }
 }
